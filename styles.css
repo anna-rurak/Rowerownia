@@ -4,10 +4,23 @@
     box-sizing: border-box;
 }
 
-/* #logo {
-    height: 60px;
+.image {
+    height: 230px;
     background-color: white;
-    border-radius: 40px;
-    position: relative;
-    bottom: 10px;
-} */
+}
+
+.navy-bg {
+    background-color: #162aa7;
+}
+
+.purple-bg {
+    background-color: #56199c;
+}
+
+.pink-bg {
+    background-color: #ffafac;
+}
+
+.darker {
+    filter: brightness(0.8);
+}

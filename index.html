@@ -12,7 +12,7 @@ Sticky footer navbar -->
     </head>
     <body>
         <!-- ------------------------ NAVBAR ------------------------ -->
-        <header class="bg-dark-subtle">
+        <header class="navbar-bg container purple-bg darker">
             <div class="container">
                 <header class="d-flex justify-content-between py-3">
                     <h3 class="mx-2">Rowerownia</h3>
@@ -20,42 +20,101 @@ Sticky footer navbar -->
                         <li class="nav-item">
                             <form class="d-flex flex-row align-items-center" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Wpisz markę roweru" aria-label="Search" />
-                                <button class="btn btn-outline-success" type="submit">Szukaj</button>
+                                <button class="btn btn-outline-dark pink-bg" type="submit">Szukaj</button>
                             </form>
                         </li>
                     </ul>
                 </header>
             </div>
         </header>
-        <main>
-            <section class="bg-primary-subtle">
-                <div class="card text-center">
-                    <div class="card-header">
-                        <ul class="nav nav-pills card-header-pills">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Active</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                            </li>
-                        </ul>
+        <main class="container mx-auto">
+            <img class="container mt-5" src="./assets/bike-bg.jpg" alt="" />
+            <div class="container row my-5">
+                <section class="col d-inline-block">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="true" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-inline-block row">
+                                <img class="image col" src="./assets/logo.png" alt="" />
+                                <div class="card-body col">
+                                    <h5 class="card-title">Rower nr 1</h5>
+                                    <p class="card-text">Rower miejski z 3-rzędowymi przerzutkami i nóżką. Komfortowa jazda po mieście.</p>
+                                    <a href="#" class="btn btn-dark">Wybierz</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                </section>
+                <section class="col d-inline-block">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="true" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-inline-block row">
+                                <img class="image col" src="./assets/logo.png" alt="" />
+                                <div class="card-body col">
+                                    <h5 class="card-title">Rower nr 1</h5>
+                                    <p class="card-text">Rower miejski z 3-rzędowymi przerzutkami i nóżką. Komfortowa jazda po mieście.</p>
+                                    <a href="#" class="btn btn-dark">Wybierz</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+                <section class="col d-inline-block">
+                    <div class="card text-center">
+                        <div class="card-header">
+                            <ul class="nav nav-tabs card-header-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="true" href="#">Active</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-inline-block row">
+                                <img class="image col" src="./assets/logo.png" alt="" />
+                                <div class="card-body col">
+                                    <h5 class="card-title">Rower nr 1</h5>
+                                    <p class="card-text">Rower miejski z 3-rzędowymi przerzutkami i nóżką. Komfortowa jazda po mieście.</p>
+                                    <a href="#" class="btn btn-dark">Wybierz</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </main>
-        <footer class="footer mt-auto py-3 bg-body-tertiary">
-            <div class="container">
-                <span class="text-body-secondary">Place sticky footer content here.</span>
+        <footer class="footer mt-auto py-3 fixed-bottom purple-bg darker">
+            <div class="container d-flex justify-content-between">
+                <span class="text-white d-inline-block">Place sticky footer content here.</span>
+                <div class="icons d-inline-block">
+                    <i class="fa-brands fa-instagram mx-1" style="color: #ffffff"></i>
+                    <i class="fa-brands fa-facebook mx-1" style="color: #ffffff"></i>
+                    <i class="fa-brands fa-whatsapp mx-1" style="color: #ffffff"></i>
+                </div>
             </div>
         </footer>
         <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/042e9b1656.js" crossorigin="anonymous"></script>
     </body>
 </html>
