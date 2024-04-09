@@ -32,99 +32,24 @@ Sticky footer navbar -->
             </div>
         </header>
         <main class="container mx-auto">
+            <!-- ------------------------ CARDS ELEMENT CONTAINER ------------------------ -->
             <div class="container row my-5" id="card-container">
-                <!-- do przekopiowania jak będzie działać js -->
-                <section class="col d-inline-block">
-                    <div class="card text-center border-dark">
-                        <div class="card-header text-bg-dark">
-                            <ul class="nav nav-tabs card-header-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link summary-tab active" href="#">Przegląd</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link tech-spec-tab" href="#">Dane techniczne</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-body text-start">
-                            <div class="d-inline-block row content">
-                                <section class="summary-card">
-                                    <img class="image col" src="./assets/1.jpg" alt="" />
-                                    <div class="card-body col px-3">
-                                        <h7 class="category lighter">- trekkingowy -</h7>
-                                        <h3 class="card-title my-3">Rower nr 1</h3>
-                                        <p class="card-text">Rower miejski z 3-rzędowymi przerzutkami i nóżką. Komfortowa jazda po mieście.</p>
-                                        <!-- <a href="#" class="choose-btn btn btn-dark">Wybierz</a> -->
-                                    </div>
-                                </section>
-                                <section class="tech-spec-card d-none">
-                                    <div class="card-body col my-0">
-                                        <h5 class="card-title my-3">Rower nr 1</h5>
-                                        <!-- <hr class="line" /> -->
-                                        <p class="card-text py-3 my-0 border-bottom border-warning">Marka: Romet</p>
-                                        <!-- <hr class="line" /> -->
-                                        <p class="card-text py-3 my-0 border-bottom border-warning">Model: SX5230</p>
-                                        <!-- <hr class="line" /> -->
-                                        <p class="card-text py-3 my-0 border-bottom border-warning">Typ: trekkingowy</p>
-                                        <!-- <hr class="line" /> -->
-                                        <p class="card-text py-3 my-0 border-bottom border-warning">Rozmiar ramy: 57 cm</p>
-                                        <!-- <hr class="line" /> -->
-                                        <p class="card-text py-3 my-0 border-bottom border-warning">Waga: 15 kg</p>
-                                    </div>
-                                </section>
-                            </div>
-                            <a href="#" class="choose-btn btn btn-dark">Wybierz</a>
+                <div class="row align-items-md-stretch">
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 bg-light border rounded-3">
+                            <h2>Add borders</h2>
+                            <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+                            <button class="btn btn-outline-secondary" type="button">Example button</button>
                         </div>
                     </div>
-                </section>
-                <section class="col d-inline-block">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <ul class="nav nav-tabs card-header-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="true" href="#">Przegląd</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Dane techniczne</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-inline-block row">
-                                <img class="image col" src="./assets/logo.png" alt="" />
-                                <div class="card-body col">
-                                    <h5 class="card-title">Rower nr 1</h5>
-                                    <p class="card-text">Rower miejski z 3-rzędowymi przerzutkami i nóżką. Komfortowa jazda po mieście.</p>
-                                    <a href="#" class="choose-btn btn btn-dark">Wybierz</a>
-                                </div>
-                            </div>
+                    <div class="col-md-6">
+                        <div class="h-100 p-5 bg-light border rounded-3">
+                            <h2>Add borders</h2>
+                            <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+                            <button class="btn btn-outline-secondary" type="button">Example button</button>
                         </div>
                     </div>
-                </section>
-                <section class="col d-inline-block">
-                    <div class="card text-center">
-                        <div class="card-header">
-                            <ul class="nav nav-tabs card-header-tabs">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="true" href="#">Przegląd</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Dane techniczne</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-inline-block row">
-                                <img class="image col" src="./assets/logo.png" alt="" />
-                                <div class="card-body col">
-                                    <h5 class="card-title">Rower nr 1</h5>
-                                    <p class="card-text">Rower miejski z 3-rzędowymi przerzutkami i nóżką. Komfortowa jazda po mieście.</p>
-                                    <a href="#" class="choose-btn btn btn-dark">Wybierz</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
             </div>
         </main>
         <footer class="footer mt-4 py-2 fixed-bottom purple-bg darker">
@@ -140,6 +65,6 @@ Sticky footer navbar -->
         <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/042e9b1656.js" crossorigin="anonymous"></script>
 
-        <script src="./index.js" type="module"></script>
+        <script src="./main.js" type="module"></script>
     </body>
 </html>
