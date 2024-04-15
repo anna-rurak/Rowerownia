@@ -3,14 +3,56 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    /* font-family: "Bebas Neue", sans-serif; */
 }
 
 body {
     min-width: 470px;
+    margin: 90px 0 50px 0;
+}
+
+header {
+    position: relative;
+    top: 12px;
+}
+
+.navbar-bg {
+    background-color: #1e1e1e;
+}
+
+#logo {
+    height: 2.8rem;
+    margin: 0 auto 30px;
+}
+
+#page-title {
+    /* color: rgb(223, 129, 5); */
+    color: white;
+    font-weight: 500;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 60px;
+    /* line-height: 70%; */
+}
+
+#page-title,
+#logo {
+    bottom: 12px;
+}
+
+#search-btn {
+    margin: 0 10px;
+}
+
+#search-btn:hover {
+    background-color: rgb(223, 129, 5);
+    color: black;
 }
 
 .card {
     height: 530px;
+    width: 400px;
+    -webkit-box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
 }
 .summary-card,
 .tech-spec-card {
@@ -22,8 +64,15 @@ body {
     text-align: center;
 }
 
-.nav-link {
-    color: orange;
+#bike-price {
+    margin: 0;
+    font-size: 130%;
+}
+
+.navbar-properties {
+    display: inline-block;
+    height: 80px;
+    border-bottom: 1px solid rgb(228, 226, 226);
 }
 
 .nav-link:hover {
@@ -48,18 +97,6 @@ body {
     bottom: 20px;
 }
 
-.navy-bg {
-    background-color: #162aa7;
-}
-
-.purple-bg {
-    background-color: #56199c;
-}
-
-.pink-bg {
-    background-color: #ffafac;
-}
-
 .darker {
     filter: brightness(0.8);
 }
@@ -67,5 +104,105 @@ body {
 .category {
     text-transform: uppercase;
     font-size: 80%;
+}
+
+/* second page */
+
+#previous-page-btn {
+    width: 20%;
+    margin-left: 23px;
+}
+
+.orange-text {
     color: orange;
+}
+
+.image-second-page {
+    height: 300px;
+}
+
+.image-third-page {
+    height: 400px;
+    border-radius: 10px;
+}
+
+#error-message-name,
+#error-message-email {
+    color: red;
+    visibility: hidden;
+}
+
+#minDateMessage,
+#maxDateMessage {
+    border-radius: 7px;
+}
+
+.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+.hide {
+    visibility: hidden;
+    -webkit-animation: fadeOut 1s;
+    animation: fadeOut 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.h-300 {
+    height: 300px;
+}
+
+#check {
+    height: 20px;
+    width: 20px;
+}
+
+#additional-accessories img {
+    height: 200px;
+    width: 250px;
+}
+
+#additional-accessories .col {
+    margin-right: 20px;
+}
+
+.item {
+    height: 200px;
+}
+
+.card-300 {
+    height: 300px;
+}
+
+#submit-btn {
+    width: 200px;
+    font-weight: bolder;
+}
+
+#submit-btn:hover {
+    width: 300px;
+    color: rgb(255, 230, 0);
 }

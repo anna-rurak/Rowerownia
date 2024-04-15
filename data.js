@@ -7,7 +7,9 @@ export const bikes = [
         frameSize: 56,
         weight: 15.3,
         price: 50,
+        info: "Czarna elegancja. Idealny do jazdy po mieście, nawet w garniturze.",
         img: "./assets/1.jpg",
+        id: 1,
     },
     {
         name: "Pearson",
@@ -17,7 +19,9 @@ export const bikes = [
         frameSize: 52,
         weight: 10.3,
         price: 55,
+        info: "Elegancki? Tak. Szybki? Owszem. Idealny dla zabieganych korposzczurów!",
         img: "./assets/2.jpg",
+        id: 2,
     },
     {
         name: "Winner",
@@ -27,7 +31,9 @@ export const bikes = [
         frameSize: 52,
         weight: 14.3,
         price: 45,
+        info: "Szybki jak błyskawica. Rowerowa wersja Nimbusa 2000. Tym rowerem prześcigniesz każdego!",
         img: "./assets/3.jpg",
+        id: 3,
     },
     {
         name: "Snow",
@@ -37,7 +43,9 @@ export const bikes = [
         frameSize: 54,
         weight: 15.9,
         price: 55,
+        info: "Czysta klasyka. Podobno zimą kamuflaż wzrasta - zlewasz się ze śniegiem; uwaga: nie dotyczy żółtej odmiany).",
         img: "./assets/4.jpg",
+        id: 4,
     },
     {
         name: "Rainbow",
@@ -47,7 +55,9 @@ export const bikes = [
         frameSize: 18,
         weight: 16.2,
         price: 40,
+        info: "Rower dla każdego marzyciela. Krążą pogłoski, że przy odpowiednim jeźdźcu zmieni się w jednorożca.",
         img: "./assets/5.jpg",
+        id: 5,
     },
     {
         name: "Coal",
@@ -57,7 +67,9 @@ export const bikes = [
         frameSize: 56,
         weight: 14,
         price: 65,
+        info: "Czarny rower tylko dla twardzieli. W swoim wyposażeniu nie posiada tylko karabinu maszynowego.",
         img: "./assets/6.jpg",
+        id: 6,
     },
     {
         name: "Raspberry",
@@ -67,7 +79,9 @@ export const bikes = [
         frameSize: 54,
         weight: 15.3,
         price: 45,
+        info: "Jednośladowiec dla prawdziwej księżniczki. Różowy kolor doda Ci uroku, a koszyk pozwoli pomieścić wiele słodkości.",
         img: "./assets/7.jpg",
+        id: 7,
     },
     {
         name: "Cloud",
@@ -77,7 +91,9 @@ export const bikes = [
         frameSize: 50,
         weight: 17.4,
         price: 50,
+        info: "Niebieski klasyk. Rower dla typowych normalsów. Znudziły Ci się tramwaje? Polecamy ten rower.",
         img: "./assets/8.jpg",
+        id: 8,
     },
     {
         name: "Fire",
@@ -87,6 +103,8 @@ export const bikes = [
         frameSize: 54,
         weight: 11.2,
         price: 55,
+        info: "Rower dla szaleńców. Nigdzie indziej nie wytrenujesz nóg tak szybko jak jadąc na nim.",
         img: "./assets/9.jpg",
+        id: 9,
     },
 ];
