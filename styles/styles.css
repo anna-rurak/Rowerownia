@@ -132,9 +132,10 @@ header {
     visibility: hidden;
 }
 
-#minDateMessage,
-#maxDateMessage {
+#start-date-msg,
+#end-date-msg {
     border-radius: 7px;
+    padding: 7px;
 }
 
 .show {

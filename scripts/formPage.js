@@ -12,6 +12,7 @@ const $startDateInput = document.getElementById("start-date");
 const $startDateMsg = document.getElementById("start-date-msg");
 const $endDateInput = document.getElementById("end-date");
 const $endDateMsg = document.getElementById("end-date-msg");
+const $finalPrice = document.getElementById("final-price");
 const $finalizationButton = document.getElementById("submit-btn");
 const $bikeName = document.getElementById("bike-name");
 const $bikeImg = document.getElementById("bike-img");
@@ -50,13 +51,37 @@ $bikeWeight.innerText = `Waga: ${bikes[userChoice].weight}kg`;
 $bikePrice.innerText = `Cena: ${bikes[userChoice].price},00 zł / dzień`;
 
 //-------------------------------------------------
+// USTAWIENIE DANYCH DOMYŚLNYCH
+//-------------------------------------------------
+
+function setSpecifictDate(num) {
+    const today = new Date();
+    today.setDate(today.getDate() + num);
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    const initialDate = `${year}-${month}-${day}`;
+    return initialDate;
+}
+
+function setSpecifictDateX(myDay, num) {
+    myDay.setDate(myDay.getDate() + num);
+    const year = day.getFullYear();
+    const month = String(myDay.getMonth() + 1).padStart(2, "0");
+    const day = String(myDay.getDate()).padStart(2, "0");
+    const initialDate = `${year}-${month}-${day}`;
+    return initialDate;
+}
+
+$startDateInput.value = setSpecifictDate(7);
+$endDateInput.value = setSpecifictDate(7);
+
+//-------------------------------------------------
 //  WALIDACJA INPUTÓW
 //-------------------------------------------------
 
 $nameInput.addEventListener("change", () => {
     const name = $nameInput.value;
-    console.log(name);
-    const $nameErrorComputed = getComputedStyle($nameError).getPropertyValue("visibility");
     const isValidName = /^[A-Z][a-z]{1,}\s[A-Z][a-z]{1,}$/;
 
     if (name === "" || name === null || !isValidName.test(name)) {
@@ -85,3 +110,67 @@ $emailInput.addEventListener("change", () => {
 //         localStorage.setItem("paymentMethod", JSON.stringify(el.getAttribute("id")));
 //     });
 // });
+
+//---------------------------------------------------------
+//  WYBÓR DATY ROZPOCZĘCIA I ZAKOŃCZENIA NAJMU ROWERU
+//---------------------------------------------------------
+
+function checkStartDate(startDate) {
+    if (startDate < new Date(setSpecifictDate(7))) {
+        $startDateMsg.style.boxShadow = "5px 5px 15px 6px #892514";
+        $startDateInput.value = setSpecifictDate(7);
+    } else {
+        $startDateMsg.style.boxShadow = "";
+        $endDateInput.value = startDate;
+    }
+}
+
+function checkEndDate(endDate) {
+    endDate = new Date(endDate);
+    let startDateScope = new Date($startDateInput.value);
+    startDateScope.setDate(startDateScope.getDate() + 30);
+    if (endDate > startDateScope) {
+        $endDateMsg.style.boxShadow = "5px 5px 15px 6px #892514";
+        $endDateInput.value = startDateScope.toISOString().slice(0, 10); // Format "YYYY-MM-DD"
+    } else if (endDate < new Date($startDateInput.value)) {
+        $endDateMsg.style.boxShadow = "5px 5px 15px 6px #892514";
+        $endDateInput.value = $startDateInput.value;
+    } else {
+        $endDateMsg.style.boxShadow = "";
+    }
+}
+
+function countDays() {
+    const daysCount = Math.ceil((new Date($endDateInput.value) - new Date($startDateInput.value)) / (1000 * 60 * 60 * 24));
+    return daysCount;
+}
+
+$startDateInput.addEventListener("change", () => {
+    const startDate = $startDateInput.value;
+    checkStartDate(startDate);
+    priceUpdate();
+});
+
+$endDateInput.addEventListener("change", () => {
+    const endDate = $endDateInput.value;
+    checkEndDate(endDate);
+    priceUpdate();
+});
+
+//---------------------------------------------------------
+//  KALKULACJA CENY NAJMU
+//---------------------------------------------------------
+
+let additionalsArray = [];
+
+// DODAĆ WYBÓR DODATKOWYCH AKCESORIÓW
+
+function priceUpdate() {
+    let additionalsCost = 0;
+    for (let i = 0; i < additionalsArray.length; i++) {
+        additionalsCost = +additionalsArray[i];
+    }
+
+    const summary = (bikes[userChoice].price + additionalsCost) * countDays();
+    $finalPrice.innerHTML = `${summary},00 zł`;
+}

@@ -69,7 +69,6 @@ function generateCards(producer) {
 }
 
 function assignEventHandlers() {
-    const $logoBtn = document.getElementById("logo");
     const $filterBtn = document.getElementById("filter-btn");
     const $filterInput = document.getElementById("filter-input");
     const $summaryTab = document.querySelectorAll(".summary-tab");
@@ -118,9 +117,9 @@ function assignEventHandlers() {
     //  FILTROWANIE PO MARCE
     //------------------------------------------------------------------------------------------------------------------------------------------------
 
-    $filterBtn.addEventListener("click", () => {
+    $filterBtn.addEventListener("click", (event) => {
+        event.preventDefault();
         const inputValue = $filterInput.value;
-        console.log(inputValue);
         const firstLetter = inputValue.slice(0, 1).toUpperCase();
         const restWord = inputValue.slice(1, inputValue.length).toLowerCase();
         const brandName = firstLetter + restWord;
