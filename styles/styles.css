@@ -132,40 +132,29 @@ header {
     visibility: hidden;
 }
 
+.form-check-input:checked {
+    background-color: orange;
+    border-color: rgb(243, 202, 125);
+}
+
+#start-date,
+#end-date {
+    text-align: center;
+}
+
+.form-control:focus {
+    border-color: rgb(235, 199, 132); /* Zmiana koloru obramowania */
+    box-shadow: 0 0 0 0.2rem rgba(238, 146, 7, 0.808); /* Zmiana koloru cienia */
+}
+
+#start-date::placeholder {
+    right: 20px;
+}
+
 #start-date-msg,
 #end-date-msg {
     border-radius: 7px;
     padding: 7px;
-}
-
-.show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-
-.hide {
-    visibility: hidden;
-    -webkit-animation: fadeOut 1s;
-    animation: fadeOut 1s;
-}
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .w-30 {

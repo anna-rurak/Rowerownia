@@ -65,12 +65,12 @@
                     <div id="payment-input" class="mb-3 mt-2 d-block mx-auto w-75">
                         <h5 class="fw-bolder">Forma płatności:</h5>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
-                            <label class="form-check-label" for="flexRadioDefault1"> Gotówka przy odbiorze </label>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="gotówka" checked />
+                            <label class="form-check-label" for="flexRadioDefault1" id="flexRadioDefault1Label"> Gotówka przy odbiorze </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
-                            <label class="form-check-label" for="flexRadioDefault2"> Przelew (dane do przelewy zostaną wysłane na podany adres email) </label>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="przelew" />
+                            <label class="form-check-label" for="flexRadioDefault2" id="flexRadioDefault2Label"> Przelew (dane do przelewy zostaną wysłane na podany adres email) </label>
                         </div>
                     </div>
                     <div class="my-3 d-block mx-auto w-75">
@@ -78,16 +78,16 @@
                         <div id="start-date-msg" class="col h-auto d-inline-block text-bg-light text-center my-auto msg">Najwcześniejsza data rozpoczęcia: 7 dni od aktualnej daty</div>
                         <div class="row my-3 w-75">
                             <div class="col input-group w-50">
+                                <span class="input-group-text">Rozpoczęcie </span>
                                 <input id="start-date" type="date" class="form-control d-inline-block" min="" required />
-                                <button type="button" class="btn btn-md btn-light border popup" required>Rozpoczęcie:<i class="fa-regular fa-circle-question mx-2"></i></button>
                             </div>
                         </div>
 
                         <div id="end-date-msg" class="col h-auto d-inline-block text-bg-light text-center my-auto msg">Min czas wynajmu: 1 dzień Maks czas wynajmu: 30 dni</div>
                         <div class="row my-3 w-75">
                             <div class="col input-group w-50">
+                                <span class="input-group-text">Zakończenie </span>
                                 <input id="end-date" type="date" class="form-control d-inline-block" min="{rentEnd}" required />
-                                <button type="button" class="btn btn-md btn-light border popup" required>Zakończenie:<i class="fa-regular fa-circle-question mx-2"></i></button>
                             </div>
                         </div>
                     </div>
@@ -96,26 +96,26 @@
                         <h5 class="fw-bolder">Dodatkowe akcesoria:</h5>
                         <div class="btn-group w-100" role="group">
                             <div class="col border rounded">
-                                <input type="checkbox" class="btn-check accessories" id="btncheck1" autocomplete="off" />
-                                <label class="btn btn-light w-100 border-bottom m-right-2" for="btncheck1">Kask rowerowy <span class="orange-text fw-bolder">+15,00 zł</span></label>
-                                <img class="d-block w-75 mx-auto" src="./assets/kask.jpg" alt="bike helmet" />
+                                <input type="checkbox" class="btn-check accessories" id="kask" autocomplete="off" />
+                                <label class="btn btn-light w-100 border-bottom m-right-2" for="kask">Kask rowerowy <span class="d-block orange-text fw-bolder">+15,00 zł</span></label>
+                                <img class="d-block w-75 img-fluid mx-auto" src="./assets/kask.jpg" alt="bike helmet" />
                             </div>
                             <div class="col border rounded">
-                                <input type="checkbox" class="btn-check accessories" id="btncheck2" autocomplete="off" />
-                                <label class="btn btn-light w-100 border-bottom me-2" for="btncheck2">Blokada rowerowa <span class="orange-text fw-bolder">+10,00 zł</span></label>
-                                <img class="d-block w-75 mx-auto" src="./assets/blokada.jpg" alt="bike lock" />
+                                <input type="checkbox" class="btn-check accessories" id="blokada" autocomplete="off" />
+                                <label class="btn btn-light w-100 border-bottom me-2" for="blokada">Blokada rowerowa <span class="d-block orange-text fw-bolder">+10,00 zł</span></label>
+                                <img class="d-block w-75 img-fluid mx-auto" src="./assets/blokada.jpg" alt="bike lock" />
                             </div>
                             <div class="col border rounded">
-                                <input type="checkbox" class="btn-check accessories" id="btncheck3" autocomplete="off" />
-                                <label class="btn btn-light w-100 border-bottom" for="btncheck3">Koszyk <span class="orange-text fw-bolder">+12,00 zł</span></label>
-                                <img class="d-block w-75 mx-auto" src="./assets/koszyk.jpg" alt="bike basket" />
+                                <input type="checkbox" class="btn-check accessories" id="koszyk" autocomplete="off" />
+                                <label class="btn btn-light w-100 border-bottom" for="koszyk">Koszyk <span class="orange-text fw-bolder d-block">+12,00 zł</span></label>
+                                <img class="img-fluid" src="./assets/koszyk.jpg" alt="bike basket" />
                             </div>
                         </div>
                     </div>
 
                     <div id="submit-div" class="row border-top border-bottom w-75 my-4 py-4 mx-auto">
                         <h2 class="col d-block w-50">Do zapłaty: <span class="orange-text" id="final-price"></span></h2>
-                        <button type="submit" id="submit-btn" class="col btn btn-lg btn-dark d-block orange-text">- Zatwierdź -</button>
+                        <a href="./summaryPage.html" id="summary-page-btn" class="col btn btn-lg btn-dark d-block orange-text">- Zatwierdź -</a>
                     </div>
                 </form>
             </div>

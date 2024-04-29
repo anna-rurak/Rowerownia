@@ -27,10 +27,10 @@
             <div class="container row my-5 mx-auto w-100" id="card-container">
                 <section class="w-75 d-block mx-auto text-center border rounded my-4 bg-light">
                     <h1 class="fw-bolder my-4">Dziękujemy za dokonanie rezerwacji!</h1>
-                    <h3 class="my-4 d-block mx-auto w-75">Forma płatności: <span class="fw-bolder orange-text">Gotówka</span></h3>
-                    <h3 class="my-4 d-block mx-auto w-75">Kwota do zapłaty: <span class="fw-bolder orange-text">150,00 zł</span></h3>
-                    <h3 class="my-4 d-block mx-auto w-75">Wybrany rower: <span class="fw-bolder orange-text">NAZWA</span></h3>
-                    <img class="image-third-page my-4 d-block mx-auto" src="./assets/1.jpg" alt="chosen bike" />
+                    <h3 class="my-4 d-block mx-auto w-75">Forma płatności: <span id="payment-method" class="fw-bolder orange-text"></span></h3>
+                    <h3 class="my-4 d-block mx-auto w-75">Kwota do zapłaty: <span id="final-rental-price" class="fw-bolder orange-text"></span></h3>
+                    <h3 class="my-4 d-block mx-auto w-75">Wybrany rower: <span id="bike-name" class="fw-bolder orange-text"></span></h3>
+                    <img class="image-third-page my-4 d-block mx-auto" id="bike-img" src="" alt="chosen bike" />
                 </section>
             </div>
         </section>
@@ -52,6 +52,6 @@
         <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.3"></script>
         <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/042e9b1656.js" crossorigin="anonymous"></script>
-        <script src="./scripts/formPage.js" type="module"></script>
+        <script src="./scripts/summaryPage.js" type="module"></script>
     </body>
 </html>
