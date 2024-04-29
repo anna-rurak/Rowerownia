@@ -42,7 +42,6 @@ const interval = setInterval(function () {
 
     const particleCount = 50 * (timeLeft / duration);
 
-    // since particles fall down, start a bit higher than random
     confetti(
         Object.assign({}, defaults, {
             particleCount,
@@ -70,7 +69,3 @@ $pageTitle.addEventListener("click", () => {
 $nextOrder.addEventListener("click", () => {
     localStorage.clear();
 });
-
-//TODO
-// dodać przycisk - "kolejne zamówienie"
-// dodać resetowanie local storage po zamknięciu przeglądarki lub jeśli ktoś wchodzi na stronę po raz pierwszy
