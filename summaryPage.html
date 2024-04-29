@@ -15,16 +15,16 @@
         <header class="navbar-properties navbar-bg fixed-top">
             <div class="container">
                 <header class="d-flex justify-content-between py-2">
-                    <div>
-                        <img id="logo" class="d-inline-block position-relative" src="./assets/logo.jpg" alt="logo" />
-                        <h3 class="mx-2 d-inline-block position-relative" id="page-title">Rowerownia</h3>
-                    </div>
+                    <a href="./index.html"
+                        ><img id="logo" class="d-inline-block position-relative" src="./assets/logo.jpg" alt="logo" />
+                        <h3 class="mx-2 d-inline-block position-relative" id="page-title">Rowerownia</h3></a
+                    >
                 </header>
             </div>
         </header>
         <section class="container mx-auto">
             <!-- ------------------------  CONTAINER ------------------------ -->
-            <div class="container row my-5 mx-auto w-100" id="card-container">
+            <div class="container row my-5 py-3 mx-auto w-100" id="card-container">
                 <section class="w-75 d-block mx-auto text-center border rounded my-4 bg-light">
                     <h1 class="fw-bolder my-4">Dziękujemy za dokonanie rezerwacji!</h1>
                     <h3 class="my-4 d-block mx-auto w-75">Forma płatności: <span id="payment-method" class="fw-bolder orange-text"></span></h3>
@@ -32,6 +32,9 @@
                     <h3 class="my-4 d-block mx-auto w-75">Wybrany rower: <span id="bike-name" class="fw-bolder orange-text"></span></h3>
                     <img class="image-third-page my-4 d-block mx-auto" id="bike-img" src="" alt="chosen bike" />
                 </section>
+                <div class="row w-50 py-4 mx-auto">
+                    <a href="./index.html" id="next-order" class="col btn btn-lg btn-dark d-block orange-text">- Kolejne zamówienie -</a>
+                </div>
             </div>
         </section>
 
@@ -52,6 +55,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.6.3"></script>
         <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/042e9b1656.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
         <script src="./scripts/summaryPage.js" type="module"></script>
     </body>
 </html>

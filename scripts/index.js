@@ -80,7 +80,8 @@ function assignEventHandlers() {
     //------------------------------------------------------------------------------------------------------------------------------------------------
 
     $summaryTab.forEach((element) => {
-        element.addEventListener("click", () => {
+        element.addEventListener("click", (event) => {
+            event.preventDefault();
             const $cardHeader = element.closest(".card-header");
             const $techSpec = $cardHeader.querySelector(".tech-spec-tab");
             const $colParent = element.closest(".col");
@@ -97,7 +98,8 @@ function assignEventHandlers() {
     });
 
     $techSpecTab.forEach((element) => {
-        element.addEventListener("click", () => {
+        element.addEventListener("click", (event) => {
+            event.preventDefault();
             const $cardHeader = element.closest(".card-header");
             const summaryEl = $cardHeader.querySelector(".summary-tab");
             const $colParent = element.closest(".col");
