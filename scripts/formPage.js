@@ -12,6 +12,7 @@ const $endDateInput = document.getElementById("end-date");
 const $endDateMsg = document.getElementById("end-date-msg");
 const $additionals = document.querySelectorAll(".accessories");
 const $finalPrice = document.getElementById("final-price");
+const $summaryPageBtn = document.getElementById("summary-page-btn");
 const $bikeName = document.getElementById("bike-name");
 const $bikeImg = document.getElementById("bike-img");
 const $bikeProducer = document.getElementById("p-producer");
@@ -48,6 +49,7 @@ $finalPrice.innerHTML = `${bikes[userChoice].price},00 zł`;
 //-------------------------------------------------
 //  WALIDACJA INPUTÓW
 //-------------------------------------------------
+
 if (storedName !== "" || storedName !== null) {
     $nameInput.value = storedName;
 }
@@ -198,6 +200,8 @@ function priceUpdate() {
             additionalsCost = additionalsCost + 10;
         } else if (additionalsArray[i] === "koszyk") {
             additionalsCost = additionalsCost + 12;
+        } else {
+            additionalsCost = 0;
         }
     }
 
@@ -205,3 +209,27 @@ function priceUpdate() {
     $finalPrice.innerHTML = `${summary},00 zł`;
     localStorage.setItem("finalRentalPrice", JSON.stringify(summary));
 }
+
+//---------------------------------------------------------
+//  ZATWIERDZENIE DANYCH I ICH PONOWNA WALIDACJA
+//---------------------------------------------------------
+
+$summaryPageBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    const name = $nameInput.value;
+    const email = $emailInput.value;
+    const isValidName = /^[A-Z][a-z]{1,}\s[A-Z][a-z]{1,}$/;
+    const isValidEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    //jeśli niepoprawne imie -> przerwij dzialanie funkcji
+    if (name === "" || name === null || !isValidName.test(name)) {
+        $nameError.style.visibility = "visible";
+        return;
+    }
+
+    if (email === "" || email === null || !isValidEmail.test(email)) {
+        $emailError.style.visibility = "visible";
+        return;
+    }
+    window.location.href = "./summaryPage.html";
+});
