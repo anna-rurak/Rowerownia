@@ -187,12 +187,14 @@ header {
     height: 300px;
 }
 
-#submit-btn {
+#summary-page-btn,
+#summary-page-btn a {
     width: 200px;
     font-weight: bolder;
+    text-decoration: none;
 }
 
-#submit-btn:hover {
+#summary-page-btn:hover {
     width: 300px;
     color: rgb(255, 230, 0);
 }

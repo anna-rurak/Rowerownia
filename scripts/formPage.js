@@ -48,11 +48,11 @@ $finalPrice.innerHTML = `${bikes[userChoice].price},00 zł`;
 //-------------------------------------------------
 //  WALIDACJA INPUTÓW
 //-------------------------------------------------
-if (storedName != "" || storedName != null) {
+if (storedName !== "" || storedName !== null) {
     $nameInput.value = storedName;
 }
 
-if (storedEmail != "" || storedEmail != null) {
+if (storedEmail !== "" || storedEmail !== null) {
     $emailInput.value = storedEmail;
 }
 
@@ -84,7 +84,7 @@ $emailInput.addEventListener("change", () => {
 //  WYBÓR FORMY PŁATNOŚCI
 //-------------------------------------------------
 
-if (storedPaymentMethod != "" || storedPaymentMethod != null) {
+if (storedPaymentMethod !== "" || storedPaymentMethod !== null) {
     localStorage.setItem("paymentMethod", JSON.stringify($radioButton1.value));
 }
 
@@ -161,7 +161,7 @@ $endDateInput.addEventListener("change", (e) => {
 //---------------------------------------------------------
 
 if (additionalsArray === null || additionalsArray === "") {
-    additionalsArray = [];
+    additionalsArray = [0];
 }
 
 for (let i = 0; i < $additionals.length; i++) {
