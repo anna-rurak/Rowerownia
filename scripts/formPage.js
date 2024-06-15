@@ -163,7 +163,7 @@ $endDateInput.addEventListener("change", (e) => {
 //---------------------------------------------------------
 
 if (additionalsArray === null || additionalsArray === "") {
-    additionalsArray = [0];
+    additionalsArray = [];
 }
 
 for (let i = 0; i < $additionals.length; i++) {
